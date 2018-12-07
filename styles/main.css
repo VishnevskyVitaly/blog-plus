@@ -289,3 +289,19 @@ img {
     line-height: 1.5;
     margin: 10px 0 10px 0;
 }
+
+/* Наверх */
+
+#go-top {
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+    cursor:pointer;
+    display:none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #cfe5ef;
+    background-image: url("../img/top-up.png");
+}
+
