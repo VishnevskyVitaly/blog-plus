@@ -8,7 +8,10 @@ body {
     font-family: Roboto;
 }
 /*header*/
-
+a {
+    text-decoration: none;
+    color: #333333;
+}
 .header {
     background-color: #cfe5ef;
     padding-top: 44px;
@@ -26,7 +29,6 @@ body {
     margin-right: 46px;
 }
 .menu-item {
-    position: relative;
     display: inline-block;
 }
 .menu-item  li{
@@ -44,16 +46,19 @@ body {
 .menu-item .link-1 {
     font-size: 20px;
     font-weight: bold;
-    text-decoration: none;
     text-transform: uppercase;
+}
+.drop {
+    position: relative;
 }
 .dropdown-menu {
     position: absolute;
     display: none;
     width: 188px;
-    top: 18px;
-    right: 58px;
-    box-shadow: 1px 1px 2px #949494;
+    top: 21px;
+    right: 0;
+    left: 0;
+    box-shadow: 1px 1px 0;
     border-radius: 0 6px 6px 6px;
     background-color: #ffffff;
 }
@@ -77,6 +82,37 @@ body {
 }
 .dropdown-menu li a:hover {
     color: #556ce1;
+}
+.drop-2 {
+    position: relative;
+    padding: 0 10px;
+}
+.drop-2 a .link-1 {
+    padding-right: 10px;
+}
+.dropdowm-menu-2 {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 188px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 0;
+    border-radius: 0 6px 6px 6px;
+}
+.drop-2:hover .dropdowm-menu-2 {
+    display: block;
+}
+.dropdowm-menu-2 li {
+    display: block;
+    margin: 15px 10px;
+}
+
+.drop-2:hover {
+    background-color: #ffffff;
+}
+.dropdowm-menu-2 li a {
+    padding: 0;
 }
 .header-bt {
     width: 125px;
@@ -157,7 +193,7 @@ hr {
     border-radius: 50%;
     background-image: url("../img/gallery-images/avatar-img-1.jpg"); background-repeat: no-repeat;
     background-position: center;
-    background-size: 340px;
+    background-size: cover;
 }
 .text-item h4 {
     display: inline-block;
@@ -305,3 +341,206 @@ img {
     background-image: url("../img/top-up.png");
 }
 
+/* Формы */
+
+form {
+    display: inline-block;
+    width: 300px;
+    margin-bottom: 40px;
+}
+.mb {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 21px 0 8px 0;
+}
+
+/* form-1 */
+
+input, select {
+    border: 1px solid;
+    border-color: #999999;
+    width: 295px;
+    padding: 17px 0 13px 16px;
+    outline: none;
+}
+input::placeholder {
+    color: #a5aeb5;
+}
+.icon-type-1  {
+    padding-left: 45px;
+    background-image: url("../img/icons-for-forms/zamok.png");
+    background-repeat: no-repeat;
+    background-position: 15px;
+    background-size: 15px;
+}
+select {
+    font-weight: bold;
+}
+
+/* form-2 */
+
+.focus:focus {
+    background-color: #e9f8ff;
+}
+
+/* form-3 */
+
+.text-color {
+    color: #999999;
+}
+.focus-state:focus {
+    background-color: #e9f8ff;
+}
+.focus-icons:focus {
+    background-image: url("../img/icons-for-forms/zamok-focus.png");
+    background-repeat: no-repeat;
+}
+.phone-call {
+    background-image: url("../img/icons-for-forms/phone-call.png");
+    background-repeat: no-repeat;
+    background-position: 15px;
+    background-size: 22px;
+    padding-left: 45px;
+}
+/* form-4 */
+.text-color-2:focus {
+    font-weight: bold;
+}
+.phone-call-focus:focus {
+    color: #333333;
+    background-image: url("../img/icons-for-forms/phone-call-focus.png");
+    background-repeat: no-repeat;
+    background-position: 15px;
+    background-size: 22px;
+    padding-left: 45px;
+}
+/* form-5 checkbox, textarea */
+.checkbox-item {
+    width: 615px;
+}
+.checkbox-style {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+input[type='checkbox'] {
+    display: none;
+}
+input[type='checkbox'] + label span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    border-radius: 5px;
+    background-image: url("../img/icons-for-forms/icon-check.png");
+    margin-right: 8px;
+    cursor:pointer;
+}
+input[type='checkbox']:checked + label span {
+    background-image: url("../img/icons-for-forms/icon-checked.png");
+}
+.margin-right {
+    margin-right: 30px;
+}
+.margin-right:last-child {
+    margin-right: 0;
+}
+.mtop {
+    margin-top: 20px;
+}
+/* Textarea */
+textarea {
+    font-family: Roboto;
+    width: 600px;
+    height: 170px;
+    border-color: #999999;
+    outline: none;
+}
+textarea::placeholder {
+    color: #97a1aa;
+}
+.area-1 {
+    padding: 17px 0 0 16px;
+}
+.chat-comment {
+    background-image: url("../img/icons-for-forms/chat-comment.png");
+    background-repeat: no-repeat;
+    background-position: 11px 10px;
+    background-size: 22px;
+    padding: 15px 0 0 45px;
+}
+
+/* form radio */
+
+input[type='radio'] {
+    display: none;
+}
+input[type='radio'] + label span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    border-radius: 5px;
+    background-image: url("../img/icons-for-forms/ellipse-1.png");
+    margin-right: 8px;
+    cursor:pointer;
+}
+input[type='radio']:checked + label span {
+    background-image: url("../img/icons-for-forms/ellipse-checked.png");
+}
+.focus-font:focus::placeholder {
+    font-weight: bold;
+    color: #000000;
+}
+.chat-comment-1:focus {
+    background-image: url("../img/icons-for-forms/chat-comment-focus.png");
+    background-repeat: no-repeat;
+    background-position: 11px 10px;
+    background-size: 22px;
+    padding: 15px 0 0 45px;
+}
+
+/* buttons */
+.main-buttons {
+    font-family: Roboto;
+    width: 600px;
+}
+.main-style {
+    display: inline-block;
+    width: 104px;
+    height: 44px;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: normal;
+    border: 1px solid;
+    border-color: #999999;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+}
+.mr {
+    margin-right: 20px;
+}
+
+/* upload-file */
+.upload-file {
+    display: inline-block;
+    width: 170px;
+
+}
+.hidden-input {
+    width: 60px;
+    height: 0;
+    padding: 0;
+    opacity: 0;
+}
+.download-file {
+    text-transform: uppercase;
+    background-image: url("../img/icons-for-forms/upload-copy.png");
+    background-repeat: no-repeat;
+    background-position: 18px;
+    background-size: 17px;
+    border: 1px solid #999999;
+    padding: 10px 15px 11px 45px;
+}
